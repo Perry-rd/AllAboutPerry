@@ -66,3 +66,21 @@ if (header) {
   window.addEventListener('scroll', updateHeaderState, { passive: true });
   updateHeaderState();
 }
+
+const scrollToTop = document.querySelector('#scrollToTop');
+
+if (scrollToTop) {
+  const updateScrollToTop = () => {
+    if (window.scrollY > 300) {
+      scrollToTop.classList.add('is-visible');
+    } else {
+      scrollToTop.classList.remove('is-visible');
+    }
+  };
+  window.addEventListener('scroll', updateScrollToTop, { passive: true });
+  updateScrollToTop();
+  scrollToTop.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
