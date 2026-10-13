@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Curriculum vitae of Perry Jhone Gordonas, application and game developer.">
+  <title>Perry Jhone Gordonas | CV</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #111412;
+      --paper: #f1f3ee;
+      --muted: #b0b8ad;
+      --accent: #c8ef6d;
+      --panel: #1a1f1b;
+      --line: rgba(241, 243, 238, .16);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      background: #292d29;
+      color: var(--paper);
+      font-family: "DM Sans", "Segoe UI", Arial, sans-serif;
+      font-size: 9pt;
+      line-height: 1.42;
+      margin: 0;
+      padding: 18px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      background: var(--ink);
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      min-height: 297mm;
+      overflow: hidden;
+      padding: 10mm;
+      width: 210mm;
+    }
+
+    .header {
+      align-items: center;
+      background: var(--panel);
+      border-bottom: 2px solid var(--accent);
+      display: flex;
+      gap: 7mm;
+      min-height: 42mm;
+      padding: 5mm 6mm;
+    }
+
+    .portrait {
+      align-items: center;
+      background: var(--ink);
+      border: 1px solid rgba(200, 239, 109, .5);
+      display: flex;
+      flex: 0 0 29mm;
+      height: 29mm;
+      justify-content: center;
+      overflow: hidden;
+      width: 29mm;
+    }
+
+    .portrait img { height: 100%; object-fit: contain; width: 100%; }
+    .identity { min-width: 0; }
+    .eyebrow, .section-title {
+      color: var(--accent);
+      font-size: 7pt;
+      font-weight: 700;
+      letter-spacing: .16em;
+      margin: 0 0 2mm;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      font-family: "Space Grotesk", "Segoe UI", Arial, sans-serif;
+      font-size: 24pt;
+      letter-spacing: -.045em;
+      line-height: 1;
+      margin: 0 0 2mm;
+    }
+
+    .role { color: var(--muted); font-size: 10pt; margin: 0 0 3mm; }
+    .contact {
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 8pt;
+      gap: 1mm 5mm;
+    }
+
+    .contact span { white-space: nowrap; }
+    .content {
+      display: grid;
+      flex: 1;
+      gap: 8mm;
+      grid-template-columns: 1.55fr 1fr;
+      padding: 6mm 1mm 3mm;
+    }
+
+    .main-column, .side-column { min-width: 0; }
+    section { margin: 0 0 5mm; }
+    .section-title {
+      align-items: center;
+      display: flex;
+      gap: 2mm;
+      margin-bottom: 2.5mm;
+    }
+
+    .section-title::after {
+      background: var(--line);
+      content: "";
+      flex: 1;
+      height: 1px;
+    }
+
+    p { margin-bottom: 0; }
+    .summary { color: #d2d7cf; font-size: 8.5pt; }
+    .job { border-left: 1px solid var(--line); margin: 0 0 3.2mm 1mm; padding: 0 0 0 3mm; }
+    .job:last-child { margin-bottom: 0; }
+    .job-heading {
+      align-items: baseline;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 3mm;
+      justify-content: space-between;
+      margin-bottom: 1mm;
+    }
+
+    h3 {
+      font-family: "Space Grotesk", "Segoe UI", Arial, sans-serif;
+      font-size: 9.5pt;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .date, .subheading { color: var(--muted); font-size: 7.5pt; }
+    .organization { color: var(--accent); font-size: 8pt; margin: 0 0 1mm; }
+    ul { margin: 1mm 0 0; padding-left: 4mm; }
+    li { color: #d2d7cf; margin: 0 0 .7mm; padding-left: .5mm; }
+    li::marker { color: var(--accent); }
+    .side-card {
+      background: var(--panel);
+      border: 1px solid rgba(241, 243, 238, .08);
+      margin-bottom: 4mm;
+      padding: 3mm;
+    }
+
+    .side-card:last-child { margin-bottom: 0; }
+    .side-card section:last-child { margin-bottom: 0; }
+    .skill-group { margin: 0 0 2.3mm; }
+    .skill-group:last-child { margin-bottom: 0; }
+    .skill-group strong { color: var(--paper); display: block; font-size: 8pt; }
+    .skill-group p, .side-copy { color: #d2d7cf; font-size: 7.7pt; }
+    .education h3 { margin-bottom: 1mm; }
+    .education p { color: #d2d7cf; font-size: 7.8pt; }
+    .education .date { color: var(--accent); margin-bottom: 1mm; }
+    .language-name { color: var(--paper); font-weight: 700; }
+    .language-level { color: var(--muted); }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 1.2mm; }
+    .tag {
+      border: 1px solid rgba(200, 239, 109, .3);
+      color: var(--paper);
+      font-size: 7pt;
+      padding: .7mm 1.5mm;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 7pt;
+      letter-spacing: .06em;
+      padding-top: 2mm;
+      text-align: right;
+      text-transform: uppercase;
+    }
+
+    @media screen {
+      .page { box-shadow: 0 14px 50px rgba(0, 0, 0, .35); }
+    }
+
+    @page { margin: 0; size: A4; }
+    @media print {
+      body { padding: 0; }
+      .page { margin: 0; min-height: 297mm; }
+    }
+
+    @media screen and (max-width: 740px) {
+      body { padding: 0; }
+      .page { min-height: 100vh; padding: 7mm; width: 100%; }
+      .content { gap: 5mm; grid-template-columns: 1fr; }
+      h1 { font-size: 21pt; }
+      .header { gap: 4mm; padding: 4mm; }
+      .portrait { flex-basis: 24mm; height: 24mm; width: 24mm; }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header class="header">
+      <div class="portrait">
+        <img src="../images/profilePic-removebg-preview.png" alt="Portrait of Perry Jhone Gordonas">
+      </div>
+      <div class="identity">
+        <p class="eyebrow">Curriculum Vitae</p>
+        <h1>Perry Jhone Gordonas</h1>
+        <p class="role">Application &amp; Game Developer</p>
+        <div class="contact">
+          <span>Himamaylan City, Negros Occidental 6108</span>
+          <span>09932671012</span>
+          <span>gordonasjhoneperry@gmail.com</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="main-column">
+        <section>
+          <h2 class="section-title">Professional Summary</h2>
+          <p class="summary">Application developer focused on building user-friendly Android and cross-platform apps with Java, Firebase, and REST APIs. Also experienced in responsive web development with HTML, CSS, and JavaScript; database management with MySQL and SQLite; and game development with Godot Engine and GDScript. Enjoys delivering efficient software solutions to practical problems.</p>
+        </section>
+
+        <section>
+          <h2 class="section-title">Experience</h2>
+          <article class="job">
+            <div class="job-heading">
+              <h3>Godot Game Developer</h3>
+              <span class="date">May 2023 – Present</span>
+            </div>
+            <p class="organization">Matthew Hughes · Milwaukee, USA</p>
+            <ul>
+              <li>Designed and implemented game mechanics for engaging gameplay experiences.</li>
+              <li>Worked with multidisciplinary teammates to develop and polish game concepts, gameplay, and user experience.</li>
+              <li>Collaborated with team members to achieve project targets.</li>
+            </ul>
+          </article>
+          <article class="job">
+            <div class="job-heading">
+              <h3>Freelancer</h3>
+              <span class="date">March 2020 – August 2023</span>
+            </div>
+            <p class="organization">Online platform</p>
+            <ul>
+              <li>Understood customer needs and delivered helpful, clear service.</li>
+              <li>Resolved complaints through effective communication and problem-solving.</li>
+              <li>Met service-time targets by streamlining workflows; maintained a clean and safe working environment.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section>
+          <h2 class="section-title">Projects &amp; Recognition</h2>
+          <article class="job">
+            <h3>Thesis Project Recognition</h3>
+            <p class="side-copy">Thesis project ranked among the Top 10 projects across all fourth-year classes and sections.</p>
+          </article>
+          <article class="job">
+            <h3>Academic Project Development</h3>
+            <p class="side-copy">Developed software applications and system-based academic projects for fellow students.</p>
+          </article>
+        </section>
+
+        <section>
+          <h2 class="section-title">Farming &amp; Applied Technology</h2>
+          <p class="summary">Practices backyard farming and poultry raising. Building a personal farm management app to track poultry records, feeding schedules, and farm expenses—bringing software development together with hands-on farming experience.</p>
+        </section>
+      </div>
+
+      <aside class="side-column">
+        <div class="side-card">
+          <section>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skill-group"><strong>Mobile &amp; Cross-Platform</strong><p>Android app development, mobile app development, cross-platform coding</p></div>
+            <div class="skill-group"><strong>Programming &amp; Game Development</strong><p>Java, Godot Engine, GDScript</p></div>
+            <div class="skill-group"><strong>Web &amp; Integration</strong><p>HTML, CSS, JavaScript, REST API integration, Firebase integration</p></div>
+            <div class="skill-group"><strong>Databases &amp; Tools</strong><p>MySQL, SQLite, Visual Studio Code</p></div>
+            <div class="skill-group"><strong>Software Development</strong><p>Application development, software development</p></div>
+          </section>
+        </div>
+
+        <div class="side-card education">
+          <section>
+            <h2 class="section-title">Education</h2>
+            <p class="date">2023</p>
+            <h3>Diploma of Higher Education in Information Technology</h3>
+            <p>Carlos Hilado Memorial State University, Binalbagan</p>
+          </section>
+        </div>
+
+        <div class="side-card">
+          <section>
+            <h2 class="section-title">Language</h2>
+            <p class="side-copy"><span class="language-name">English</span><br><span class="language-level">B1 · Intermediate</span></p>
+          </section>
+        </div>
+
+        <div class="side-card">
+          <section>
+            <h2 class="section-title">Interests</h2>
+            <div class="tag-list">
+              <span class="tag">Mobile development</span>
+              <span class="tag">Web development</span>
+              <span class="tag">Godot game development</span>
+              <span class="tag">Farm app development</span>
+              <span class="tag">Backyard farming</span>
+              <span class="tag">Poultry raising</span>
+            </div>
+          </section>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="footer">Perry Jhone Gordonas · Curriculum Vitae</footer>
+  </article>
+</body>
+</html>
